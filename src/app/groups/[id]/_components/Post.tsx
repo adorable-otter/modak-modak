@@ -56,16 +56,13 @@ const Post = ({ post }: PostProps) => {
         <div className="flex items-center justify-between w-full h-8 mb-3">
           <div className="flex items-center space-x-3">
             {/* 동그란 프로필 이미지 */}
-            <div className="w-8 h-8 rounded-full overflow-hidden">
-              {/* 동그란 프로필 이미지 */}
-              <Image
-                src={post.users.profile_image}
-                alt="프로필"
-                width={32}
-                height={32}
-                className="rounded-full object-cover"
-              />
-            </div>
+            <Image
+              src={post.users.profile_image}
+              alt="프로필"
+              width={32}
+              height={32}
+              className="w-8 h-8 rounded-full object-cover"
+            />
             {/* 닉네임 */}
             <span className="text-base font-semibold text-gray-900">{post.users.nickname}</span>
           </div>
