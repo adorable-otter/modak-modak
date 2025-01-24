@@ -22,7 +22,7 @@ const MemberCard = ({
   const { nickname, profile_image: profile } = users;
 
   return (
-    <div className="w-full border-b border-gray-200">
+    <div className="w-full">
       <div className="px-5 h-16 flex bg-gray-100 justify-between items-center">
         <div className="flex gap-4">
           <div className="w-8 h-8 rounded-full overflow-hidden">

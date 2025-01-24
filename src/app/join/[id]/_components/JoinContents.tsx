@@ -11,7 +11,7 @@ const JoinContents = () => {
   if (isPending) return <GlobalLoading />;
 
   return (
-    <div className="w-full h-full relative top-0">
+    <div className="w-full h-full relative top-0 border-x border-gray-200">
       {user ? <UserQueryJoin userId={user.id} /> : <NonUserQueryJoin />}
     </div>
   );

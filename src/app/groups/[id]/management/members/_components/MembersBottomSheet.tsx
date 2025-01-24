@@ -20,20 +20,20 @@ const MembersBottomSheet = () => {
   };
 
   return (
-    <BottomSheet isOpen={isActionModalOpen} onClose={onCloseBottomSheet} className="management">
-      <div className="my-5 w-full rounded-xl overflow-hidden divide-y divide-gray-200">
-        <div className="bg-gray-100">
-          <Button
-            type={'button'}
-            label="대표 양도하기"
-            className={'w-full px-3 py-4 flex justify-start items-center gap-4'}
-            onClick={onModalOpen}
-          >
-            <Leader />
-          </Button>
+      <BottomSheet isOpen={isActionModalOpen} onClose={onCloseBottomSheet} className="management mx-auto max-w-[600px]">
+        <div className="my-5 w-full rounded-xl overflow-hidden divide-y divide-gray-200">
+          <div className="bg-gray-100">
+            <Button
+              type={'button'}
+              label="대표 양도하기"
+              className={'w-full px-3 py-4 flex justify-start items-center gap-4'}
+              onClick={onModalOpen}
+            >
+              <Leader />
+            </Button>
+          </div>
         </div>
-      </div>
-    </BottomSheet>
+      </BottomSheet>
   );
 };
 

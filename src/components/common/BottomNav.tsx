@@ -49,30 +49,32 @@ const BottomNav = () => {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 w-full h-16 bg-white flex shadow-[0px_-4px_4px_0px_rgba(0,0,0,0.1)] z-[30]">
-      {buttons.map((button) => (
-        <Link
-          href={button.href}
-          key={button.id}
-          className="flex-1 flex justify-center items-center"
-          onClick={
-            button.id !== 'chat'
-              ? () => setActiveButton(button.id)
-              : () => alert('아직 서비스 준비 중입니다!😊 조금만 기다려 주세요.')
-          }
-        >
-          <div className="flex flex-col justify-end items-center">
-            <div
-              className={`w-16 h-8 rounded-full flex items-center justify-center ${activeButton === button.id ? 'bg-primary-10' : ''}`}
-            >
-              {activeButton === button.id ? button.iconOn : button.iconOff}
+    <div className="m-auto w-full flex max-w-[600px]">
+      <div className="w-full max-w-[600px] h-16 fixed bottom-0 bg-white flex shadow-[0px_-4px_4px_0px_rgba(0,0,0,0.1)] z-[30]">
+        {buttons.map((button) => (
+          <Link
+            href={button.href}
+            key={button.id}
+            className="flex-1 flex justify-center items-center"
+            onClick={
+              button.id !== 'chat'
+                ? () => setActiveButton(button.id)
+                : () => alert('아직 서비스 준비 중입니다!😊 조금만 기다려 주세요.')
+            }
+          >
+            <div className="flex flex-col justify-end items-center">
+              <div
+                className={`w-16 h-8 rounded-full flex items-center justify-center ${activeButton === button.id ? 'bg-primary-10' : ''}`}
+              >
+                {activeButton === button.id ? button.iconOn : button.iconOff}
+              </div>
+              <div className={`text-sm ${activeButton === button.id ? 'text-primary' : 'text-gray-500'}`}>
+                {button.label}
+              </div>
             </div>
-            <div className={`text-sm ${activeButton === button.id ? 'text-primary' : 'text-gray-500'}`}>
-              {button.label}
-            </div>
-          </div>
-        </Link>
-      ))}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };

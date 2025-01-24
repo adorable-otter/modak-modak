@@ -11,6 +11,7 @@ const HomeContents = forwardRef<HTMLDivElement>((_, ref) => {
       </div>
       <div ref={ref} />
       <div className="h-auto pb-[5.25rem] bg-white rounded-t-[1.25rem]">
+        
         <HomeGroupListSection />
       </div>
     </>

@@ -22,7 +22,7 @@ const Modal = ({ children, onClickOutSide }: ModalProps) => {
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50"
+      className="w-full modal-back-drop fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50"
       onClick={handleClickOutside} // 배경 클릭 시 닫기
     >
       <div

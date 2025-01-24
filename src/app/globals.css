@@ -73,6 +73,20 @@
   .toggle-btn input:checked + .slider::before {
     transform: translateX(22px);
   }
+  
+  @media (min-width: 600px) {
+    /*모달 배경색 가운데 정렬*/
+    .modal-back-drop {
+      width: 600px !important;
+      margin: auto;
+    }
+    /*라이브러리 모달 배경색 가운데 정렬할 때는 이것도 필요*/
+    .modal-sheet-back-drop {
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+    }
+  }
 }
 
 body {
@@ -117,7 +131,7 @@ body {
   }
 
   .floating-btn {
-    @apply w-[124px] h-11 flex items-center justify-center gap-1 rounded-[20px] text-sm bg-primary font-semibold leading-[140%] text-white shadow-[0px_4px_4px_0px_#00000033] fixed bottom-[6.125rem] right-5;
+    @apply w-[124px] h-11 flex items-center justify-center gap-1 rounded-[20px] text-sm bg-primary font-semibold leading-[140%] text-white shadow-[0px_4px_4px_0px_#00000033] fixed bottom-[6.125rem] /*right-5*/;
   }
 
   .no-floating-btn {

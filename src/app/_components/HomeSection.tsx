@@ -41,12 +41,14 @@ const HomeSection = () => {
   }, []);
 
   return (
-    <div className="bg-primary-10">
+    <div className="border-x border-gray-200">
       <Header hasSetting={false} home={true} isScrolled={isScrolled} />
       <HomeContents ref={targetRef} />
-      <Button label={'모임 만들기'} className={'floating-btn z-40'} type={'button'} onClick={onCreateGroup}>
-        <Plus className={'w-4 h-4'} active={true} />
-      </Button>
+      <div className="ml-[calc(100%-144px)]">
+        <Button label={'모임 만들기'} className={'floating-btn z-40'} type={'button'} onClick={onCreateGroup}>
+          <Plus className={'w-4 h-4'} active={true} />
+        </Button>
+      </div>
     </div>
   );
 };

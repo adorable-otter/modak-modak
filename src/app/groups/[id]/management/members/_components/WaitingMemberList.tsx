@@ -26,14 +26,15 @@ const WaitingMemberList = ({ isLeaderUser }: WaitingMemberListProps) => {
             <span>대기 멤버</span> <span className="text-primary">{data ? data.length : 0}</span>
           </div>
         </div>
-        <div className="divide-y divide-gray-200">
-          {data &&
-            data.map((member) => (
-              <MemberCard key={member.users.id} memberData={member} isLeaderUser={isLeaderUser} mode={'waiting'} />
-            ))}
+        <div className={`${data?.length ? 'border-b border-gray-200' : ''}`}>
+          <div className="divide-y divide-gray-200">
+            {data &&
+              data.map((member) => (
+                <MemberCard key={member.users.id} memberData={member} isLeaderUser={isLeaderUser} mode={'waiting'} />
+              ))}
+          </div>
         </div>
       </div>
-
     </>
   );
 };
