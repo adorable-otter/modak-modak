@@ -60,6 +60,7 @@ export async function updateSession(request: NextRequest) {
           .eq('group_id', groupId)
           .eq('user_id', user?.id)
           .eq('is_approved', true)
+          .limit(1) // 그룹에 여러번 가입되어 있더라도 진입 가능하도록 방지
           .single();
 
         // 그룹 멤버가 아닌 경우 접근 제한
