@@ -46,6 +46,8 @@ export const updateUser = async (toUpdate: UserUpdate) => {
 
 export const loginAsGuest = async () => {
   const supabase = await createClient();
-  const { error } = await supabase.auth.signInWithPassword({ email: 'modak@modak.com', password: 'modak1230' });
+  // const randomNumber = 10;
+  const email = `test8@test.com`;
+  const { error } = await supabase.auth.signInWithPassword({ email: email, password: '123123' });
   if (error) throw new Error('게스트 로그인에 실패했습니다.');
 };
