@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import Summary from '@app/chat/_components/Summary';
 
@@ -20,6 +20,8 @@ const ChatAISummary = ({ messages }: ChatAISummaryProps) => {
 
   const { SmallAlert, openAlert } = useSmallAlert();
 
+  const buttonRef = useRef<boolean>(false);
+
   const filterTodayMessages = (messages: MessageType[]) => {
     const today = new Date().toLocaleDateString();
     return messages.filter((message) => new Date(message.created_at).toLocaleDateString() === today);
@@ -32,6 +34,10 @@ const ChatAISummary = ({ messages }: ChatAISummaryProps) => {
       openAlert();
       return;
     }
+
+    if (buttonRef.current) return;
+
+    buttonRef.current = true;
 
     const ws = new WebSocket('wss://api.openai.com/v1/realtime?model=gpt-4o-realtime-preview-2024-10-01', [
       'realtime',
@@ -90,6 +96,7 @@ const ChatAISummary = ({ messages }: ChatAISummaryProps) => {
     });
 
     ws.addEventListener('close', () => {
+      buttonRef.current = false;
       console.log('AI 요약을 마쳤습니다.');
     });
   };

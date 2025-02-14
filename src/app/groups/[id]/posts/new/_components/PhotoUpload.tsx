@@ -10,7 +10,7 @@ import { DeletePhoto, PlusGray } from '@components/icons';
 import { useState } from 'react';
 
 const MAX_FILES = 10; // 최대 파일 수
-const MAX_WIDTH = 700; // 최대 너비
+const MAX_WIDTH = 1024; // 최대 너비
 const QUALITY = 1; // 이미지 품질 (0 ~ 1)
 
 interface PhotoUploadProps {
@@ -41,7 +41,7 @@ const PhotoUpload = ({ selectedFiles, setSelectedFiles, OpenImageCountAlert }: P
         if (!ctx) return reject('Canvas context not available');
 
         // 이미지 크기 조정
-        const scale = Math.min(MAX_WIDTH / img.width, 1);
+        const scale = img.width > MAX_WIDTH ? Math.min(MAX_WIDTH / img.width, 1) : 1;
         const width = img.width * scale;
         const height = img.height * scale;
 

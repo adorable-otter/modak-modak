@@ -53,7 +53,6 @@ export const PostNewForm = () => {
     });
     uploadPostMutation(formData, {
       onSuccess: () => {
-        setIsUploading(false);
         router.push(`/groups/${groupId}`);
       },
       onError: () => {

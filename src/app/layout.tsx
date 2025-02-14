@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import type { Viewport } from 'next';
 
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import localFont from 'next/font/local';
 
@@ -44,6 +45,7 @@ export default function RootLayout({
           <ReactQueryDevtools />
         </Providers>
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
     </html>
   );
 }

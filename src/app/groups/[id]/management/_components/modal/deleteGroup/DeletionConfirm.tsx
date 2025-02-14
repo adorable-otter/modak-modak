@@ -37,7 +37,7 @@ const DeletionConfirm = ({ onNextStep }: DeletionConfirmProps) => {
         <input
           type="text"
           placeholder="삭제라는 글자를 입력해주세요"
-          className="px-4 py-3 text-base rounded-lg border border-solid border-gray-300 focus:outline-gray-700"
+          className="w-full px-4 py-3 text-base rounded-lg border border-solid border-gray-300 focus:outline-gray-700"
           onChange={(e) => {
             setConfirmationInput(e.currentTarget.value);
           }}

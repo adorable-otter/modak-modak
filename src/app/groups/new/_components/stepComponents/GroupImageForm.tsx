@@ -43,7 +43,7 @@ const GroupImageForm = ({ onNext, onPrev, prevData }: GroupImageFormProps) => {
           <div className="p-5 flex flex-col items-center">
             <div>
               <label htmlFor="profilePhoto" className="relative">
-                <div className="m-auto w-24 h-24">
+                <div className="m-auto w-24 h-24 cursor-pointer">
                   <Image
                     src={values.imgurl}
                     alt={'그룹 프로필'}
@@ -52,7 +52,7 @@ const GroupImageForm = ({ onNext, onPrev, prevData }: GroupImageFormProps) => {
                     className="w-full h-full rounded-xl object-cover"
                   />
                 </div>
-                <div className="block absolute bottom-[-8px] right-[-14px]">
+                <div className="block absolute bottom-[-8px] right-[-14px] cursor-pointer">
                   <Modification />
                 </div>
               </label>

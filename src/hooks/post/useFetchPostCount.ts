@@ -6,6 +6,5 @@ export const useFetchPostCount = (groupId: string, searchTerm?: string) => {
     queryKey: ['postCount', groupId, searchTerm || ''],
     queryFn: () => getPostCount(groupId, searchTerm),
     enabled: !!groupId,
-    staleTime: 1000 * 60 * 5, // 5분
   });
 };

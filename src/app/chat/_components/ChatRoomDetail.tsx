@@ -16,7 +16,7 @@ const ChatRoomDetail = () => {
 
   const { id: chatRoomId } = useParams();
 
-  const { chatGroupName } = useGroupName(chatRoomId as string);
+  const { chatGroupInfo } = useGroupName(chatRoomId as string);
 
   const keyboardHeight = useIOSKeyboardHeight();
 
@@ -27,7 +27,7 @@ const ChatRoomDetail = () => {
         bottom: keyboardHeight > 0 ? keyboardHeight : 0,
       }}
     >
-      <FunnelHeader label={chatGroupName?.name as string} />
+      <FunnelHeader label={chatGroupInfo?.data.name as string} users={chatGroupInfo?.chatRoomUsers} />
       <ChatRoom user={user} chatRoomId={chatRoomId as string} />
       <ChatInput user={user} chatRoomId={chatRoomId as string} />
     </div>

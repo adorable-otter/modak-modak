@@ -4,7 +4,7 @@ import getGroupName from '@queries/chat/getGroupName';
 
 const useGroupName = (chatRoomId: string) => {
   const {
-    data: chatGroupName,
+    data: chatGroupInfo,
     isPending,
     isError,
   } = useQuery({
@@ -13,7 +13,7 @@ const useGroupName = (chatRoomId: string) => {
     enabled: !!chatRoomId,
   });
 
-  return { chatGroupName, isPending, isError };
+  return { chatGroupInfo, isPending, isError };
 };
 
 export default useGroupName;

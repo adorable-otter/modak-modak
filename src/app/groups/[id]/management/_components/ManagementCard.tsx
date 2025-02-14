@@ -23,7 +23,7 @@ const ManagementCard = ({ children, label, link = null, handleClick = () => {}, 
           </Link>
         </div>
       ) : (
-        <div className={`w-full ${className}`} onClick={handleClick}>
+        <div className={`w-full cursor-pointer ${className}`} onClick={handleClick}>
           <div className="px-5 h-14 flex items-center justify-between">
             <span>{label}</span> {children}
           </div>

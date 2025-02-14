@@ -14,7 +14,7 @@ const UserDetails = () => {
           width={56}
           height={56}
           alt="profile image"
-          className="rounded-full w-full h-full"
+          className="w-14 h-14 rounded-full object-cover"
           priority={true}
         />
       </div>

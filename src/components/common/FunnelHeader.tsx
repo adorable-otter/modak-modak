@@ -6,9 +6,10 @@ import { PrevArrow } from '@components/icons';
 
 interface FunnelHeaderProps {
   label: string;
+  users?: number;
 }
 
-const FunnelHeader = ({ label = '' }: FunnelHeaderProps) => {
+const FunnelHeader = ({ label = '', users }: FunnelHeaderProps) => {
   const router = useRouter();
 
   const handleNaivation = () => router.back();
@@ -22,7 +23,14 @@ const FunnelHeader = ({ label = '' }: FunnelHeaderProps) => {
         >
           <PrevArrow className=" w-6 h-6" />
         </div>
-        <h3 className="text-center text-xl font-semibold leading-[140%]">{label}</h3>
+        <h3
+          className={`text-center text-xl font-semibold leading-[140%] ${users && users > 0 ? 'flex items-center' : ''}`}
+        >
+          <span className="block max-w-[175px] overflow-hidden whitespace-nowrap text-ellipsis break-all">{label}</span>
+          {users && users > 0 && (
+            <span className="text-lg font-semibold leading-[140%] text-primary ml-2">{users}</span>
+          )}
+        </h3>
       </div>
     </header>
   );

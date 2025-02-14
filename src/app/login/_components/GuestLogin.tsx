@@ -23,7 +23,7 @@ const GuestLogin = () => {
         <span className="mx-5 text-gray-300 text-xs">또는</span>
         <div className="flex-grow border-t border-gray-300"></div>
       </div>
-      <Button className="guest-login" label="모닥모닥 둘러보기" type="button" onClick={handleGuestButtonClick}>
+      <Button className="guest-login" label="로그인 없이 둘러보기" type="button" onClick={handleGuestButtonClick}>
         <ModakIcon />
       </Button>
     </>

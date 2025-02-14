@@ -11,7 +11,7 @@ const NoPost = () => {
 
   return (
     <>
-      <div className="mx-auto mt-[3.375rem] text-center justify-center">
+      <div className="mx-auto my-[3.375rem] text-center justify-center">
         <h4 className="pb-5 text-2xl font-bold">아직 게시글이 없네요!</h4>
         <p className="text-gray-700 text-lg">게시글을 쓰기 위해서는</p>
         <p className="text-gray-700 text-lg">일정 선택이 필수이니 등록해볼까요?</p>

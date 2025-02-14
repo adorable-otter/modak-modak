@@ -64,7 +64,7 @@ const ScheduleSelectSection = ({
             </div>
           </header>
 
-          <section className="px-5 flex-1 overflow-y-scroll scrollbar-hide">
+          <section className="px-5 flex-1 overflow-y-scroll scrollbar-hide pb-[90px]">
             <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
             <div className="mt-6 mb-5">
               <CountBar value={scheduleData ? scheduleData.length : 0} />

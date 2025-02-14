@@ -12,7 +12,7 @@ const NoPhoto = () => {
 
   return (
     <>
-      <div className="mx-auto mt-[8.125rem] text-center">
+      <div className="mx-auto mt-[7.5rem] mb-24 text-center">
         <h4 className="pb-5 text-2xl font-bold">아직 공유된 사진이 없네요!</h4>
         <p className="text-gray-700 text-lg">사진과 함께 글을 작성하고</p>
         <p className="text-gray-700 text-lg">우리만의 추억을 공유해보세요</p>

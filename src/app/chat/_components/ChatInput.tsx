@@ -55,7 +55,7 @@ const ChatInput = ({ user, chatRoomId }: ChatInputProps) => {
   };
 
   return (
-    <div className="px-5 py-2 absolute bottom-0 left-0 right-0 z-10 bg-white">
+    <div className="max-w-[600px] mx-auto border-x border-gray-200 px-5 py-2 absolute bottom-0 left-0 right-0 z-10 bg-white">
       <div className="w-full border bg-white px-3 py-2 rounded-lg flex items-center gap-1">
         <textarea
           rows={1}

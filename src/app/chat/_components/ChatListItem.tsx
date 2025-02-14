@@ -30,7 +30,7 @@ const ChatListItem = ({ chat }: ChatListItemProps) => {
         />
         <div className="w-full">
           <div className="w-full flex items-center justify-between gap-2">
-            <h3 className="text-base font-semibold leading-[140%] text-gray-900 max-w-[214px] h-auto">
+            <h3 className="text-base font-semibold leading-[140%] text-gray-900 max-w-[214px] h-auto overflow-hidden whitespace-nowrap text-ellipsis break-all">
               {chat.group_name}
             </h3>
             <h4 className="text-[10px] font-normal leading-[140%] text-gray-400">

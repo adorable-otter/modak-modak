@@ -79,6 +79,33 @@ export async function updateSession(request: NextRequest) {
         }
       }
     }
+
+    // 채팅방 접근 시 멤버 확인
+    if (pathname.startsWith('/chat')) {
+      if (!user) {
+        const url = request.nextUrl.clone();
+        url.pathname = '/login';
+        return NextResponse.redirect(url);
+      }
+
+      const match = pathname.match(/^\/chat\/([^/]+)/);
+      const chatRoomId = match ? match[1] : null;
+
+      if (chatRoomId) {
+        const { data: chatMember, error: chatMemberError } = await supabase
+          .from('chat_room_members')
+          .select('id')
+          .eq('chat_room_id', chatRoomId)
+          .eq('user_id', user.id)
+          .single();
+
+        if (!chatMember || chatMemberError) {
+          const url = request.nextUrl.clone();
+          url.pathname = '/';
+          return NextResponse.redirect(url);
+        }
+      }
+    }
   }
 
   // IMPORTANT: You *must* return the supabaseResponse object as it is.

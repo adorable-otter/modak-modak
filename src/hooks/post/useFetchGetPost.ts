@@ -8,7 +8,6 @@ export const useFetchGetPost = (postId: string) => {
     queryKey: [postId],
     queryFn: () => getSinglePost(postId),
     enabled: !!postId,
-    staleTime: 1000 * 60 * 5,
   });
   return { data, isPending, isError };
 };

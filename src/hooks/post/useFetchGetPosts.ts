@@ -8,7 +8,6 @@ export const useFetchGetPosts = (groupId: string, searchTerm?: string) => {
     queryKey: ['posts', groupId, searchTerm || ''],
     queryFn: ({ pageParam = 0 }) => getPosts(groupId, Number(pageParam), PAGE_SIZE, searchTerm),
     enabled: !!groupId,
-    staleTime: 1000 * 60 * 60,
     initialPageParam: 0,
     getNextPageParam: (lastPage, allPages) => {
       if (!lastPage || lastPage.length === 0) {
