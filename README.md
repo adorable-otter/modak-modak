@@ -5,40 +5,48 @@
 # 📝목차
 
 1. [프로젝트 소개](#-프로젝트-소개)
-2. [팀원 소개](#-our-team)
+2. [팀원 소개](#-team-members)
 3. [시스템 아키텍쳐](#-시스템-아키텍쳐)
 4. [프로젝트 기능 및 페이지 구성](#️-프로젝트-기능)
 5. [기능 구현 영상](#-기능-구현-영상)
 6. [기술 스택](#️-기술-스택)
 7. [트러플 슈팅](#-트러블-슈팅)
-8. [프로젝트 구조](#-프로젝트-구조)
-9. [설치 및 실행](#️-설치-및-실행)
 
 <br>
 
 # 📑 프로젝트 소개
 
-모닥모닥은 "모으다"라는 의미를 담은 방언에서 영감을 받아 탄생한 프라이빗 모임 관리 및 추억 공유 플랫폼입니다. <span style="background-color: #ffdce0; color: black;">공개적인 SNS의 피로감에서 벗어나, 우리만의 소중한 공간에서 모임을 기록하고 추억을 나눌 수는 없을까?</span> 라는 질문에서 시작되었습니다.
-모닥모닥은 친구, 가족, 동료 등 소중한 사람들과의 특별한 순간을 간직하고 공유할 수 있는 따뜻한 공간을 제공합니다.
+https://github.com/user-attachments/assets/3f91078b-3812-4c40-9d68-244093e007be
 
-- 우리만의 공간: 초대된 멤버만 참여할 수 있는 프라이빗한 공간을 만들어보세요.
-
-- 추억 기록: 사진, 메모, 날짜 등 모임의 소중한 순간을 간편하게 기록하고 저장할 수 있습니다.
-
-- 추억 공유: 함께한 사람들과만 추억을 나누며, 오랜 시간이 지나도 다시 돌아볼 수 있는 공간을 제공합니다.
+모닥모닥은 프라이빗 모임 관리 및 추억 공유 플랫폼으로 "모으다"라는 의미를 담은 방언에서 영감을 받아 탄생했습니다. <br>
+공개적인 SNS의 피로감에서 벗어나, 우리만의 소중한 공간에서 모임을 기록하고 추억을 나누고 싶으신가요? <br>
+모닥모닥으로 친구, 가족, 동료 등 소중한 사람들과의 특별한 순간을 간직하고 공유해보세요!
 
 <br>
 
-# 👨‍👩‍👧‍👦 Our Team
+- **우리만의 공간**: 링크를 통해 초대된 멤버만 참여할 수 있는 프라이빗한 공간을 만들어보세요.
 
-| 박상기                                               | 박산하                                                   | 김민후                                | 박은영                                   | 원윤선                                     |
-| ---------------------------------------------------- | -------------------------------------------------------- | ------------------------------------- | ---------------------------------------- | ------------------------------------------ |
+- **추억 기록**: 사진, 메모, 날짜 등 모임의 소중한 순간을 간편하게 기록하고 저장할 수 있습니다.
+
+- **추억 공유**: 함께한 사람들과만 추억을 나누며, 오랜 시간이 지나도 다시 돌아볼 수 있는 공간을 제공합니다.
+
+<br><br>
+
+-> [모바일 어플리케이션도 있어요!](https://github.com/adorable-otter/modak-native)
+
+<br><br>
+
+# 👨‍👩‍👧‍👦 Team Members
+
+| 박상기                         | 박산하                            | 김민후                         | 박은영                                   | 원윤선                                     |
+| ----------------------------- | -------------------------------- | ----------------------------- | --------------------------------------- | ------------------------------------------ |
 | [@adorable-otter](https://github.com/adorable-otter) | [@heftyCornerstone](https://github.com/heftyCornerstone) | [@minhoo](https://github.com/Kminhoo) | [@euncloud](https://github.com/euncloud) | [@WonYunSun](https://github.com/WonYunSun) |
-| 팀장                                                 | 부팀장                                                   | 팀원                                  | 팀원                                     | 팀원                                       |
+| 팀장                             | 부팀장                                         | 팀원                            | 팀원                          | 팀원                              |
+|인증/인가, 일정 캘린더, <br> react native app|홈, 모임 관리, 멤버 목록, <br>모임 가입 신청, 알림|        댓글, 채팅           | 모임방, 게시글CRUD, 사진첩, <br> 공용 컴포넌트, 게시글 검색 |모임 생성, 모임 일정, <br> 공용 컴포넌트  |
 
-<br>
+<br><br>
 
-## 🚧 시스템 아키텍쳐
+# 🚧 시스템 아키텍쳐
 
 ![Image](https://github.com/user-attachments/assets/a04f3b1c-7bb1-4452-858d-289f1d2e2e14)
 
@@ -48,28 +56,50 @@
 
 ### 1. **페이지 구성**
 
-- **홈페이지 (`/`)** : SSG 렌더링 방식, 가입한 모임과 가입 대기중인 모임 목록 보기
-- **로그인/회원가입 (`/login`, `/signup`)** : CSR 렌더링 방식, 소셜 로그인 기능, 소셜 로그인 간편 회원가입
-- **마이 페이지 (`/mypage`)** : CSR 렌더링 방식, 프로필, 일정 표시
-- **게시글 리스트 페이지 (`/groups/[id]`)** : CSR 렌더링 방식, 모임방 게시글 업데이트
-- **모임 관리 페이지 (`/groups/[id]/management`)** : CSR 렌더링 방식, 모임 프로필 변경, 모임방 알림 on / off, 모임 탈퇴, 모임 삭제, 모임 초대 링크 복사
-- **멤버 목록 페이지 (`/groups/[id]/management/members`)** : SSR 렌더링 방식, 모임 가입 신청 멤버 수락 및 거절, 대표 양도
-- **모임 가입 신청 페이지 (`/join/[id]`)** : 모임 가입 신청(로그인유저와 비로그인 유저, 이미 가입한 모임, 이미 가입 신청 넣은 모임, 아직 가입 신청 넣지 않은 모임 분기처리)
-- **게시글 리스트 페이지 (`/groups/[id]`)** : CSR 렌더링 방식, 모임방 게시글 업데이트
-- **채팅페이지 (`/chat`)** : CSR 렌더링 방식, 채팅방 리스트 업데이트, 채팅 메세지 읽음 처리기능
-- **채팅 상세 페이지 (`/chat/[id]`)** : CSR 렌더링 방식, 채팅 내용 실시간 업데이트, 읽음 처리, AI요약 기능
-- **알림 페이지 (`/notifiactions`)** : CSR 렌더링 방식, 신규 및 이미 읽은 알림 확인, 알림 페이지 진입 이후 퇴장 시 신규 알림은 읽음 처리
+#### 모임 가입 신청  [`/join/[id]`]
+- 모임 가입 신청 링크 클릭 시 진입
+
+#### 로그인/회원가입  [`/login`, `/signup`]
+- 소셜 로그인 기능, 소셜 로그인 간편 회원가입
+
+<br>
+
+#### 홈  [`/`]
+- 가입/대기중 모임 목록
+
+#### 알림  [`/notifiactions`]
+- 신규/읽은 알림 확인
+
+#### 마이페이지  [`/mypage`]
+- 프로필 표시, 일정 표시
+
+<br>
+
+#### 채팅  [`/chat`]
+- 채팅방 리스트 업데이트, 채팅 메세지 읽음 처리기능
+  #### 채팅 상세  [`/chat/[id]`]
+    - 채팅 내용 실시간 업데이트, 읽음 처리, AI요약 기능
+
+<br>
+
+#### 모임방  [`/groups/[id]`]
+-  모임방 게시글 업데이트
+
+    #### 모임 관리  [`/groups/[id]/management`]
+    - 모임 프로필 변경, 모임방 알림 on / off, 모임 탈퇴, 모임 삭제, 모임 초대 링크 복사
+
+    #### 멤버 목록  [`/groups/[id]/management/members`]
+    - 모임 가입 신청 수락 및 거절, 대표 양도
+
+<br>
 
 ### 2. **상세 기능**
 
-#### 로그인, 회원가입
-
-- **supabase authentication**을 통한 사용자 소셜 로그인
-- **supabase authentication**을 통한 소셜 로그인 간편 회원가입
+#### 모임 가입 신청 페이지
+ - 사용자의 다양한 상태에 따른 분기처리
 
 #### 사용자 프로필 관리
 
-- 사용자 프로필 관리(닉네임, 프로필 이미지 업데이트)
 - **Swiper**를 사용한 사용자 모임 일정, 캘린더 확인
 
 #### 일정
@@ -78,10 +108,6 @@
 - **Funnel** 패턴을 사용한 깔끔한 UX 경험 제공
 - **react-day-picker** 라이브러리와 커스텀 timePicker를 사용한 UI 제공
 - 일정 검색 기능
-
-#### 푸시 알림
-
-- **Expo push notification API**, **supabase webhook**, 그리고 **supabase edge function**을 이용하여 수파베이스 DB에 새로운 데이터가 들어올 때 모바일 어플리케이션에 로그인한 유저의 핸드폰에 푸시 알림을 보냄
 
 #### 게시글
 
@@ -100,22 +126,23 @@
 - **Supabase 메시지 구독**을 통해 읽음 처리 기능 추가
 
 <br>
+<br>
 
 # 📱 기능 구현 영상
 
 |                                    로그인 및 로그아웃                                     |                                         모임 생성                                         |                                         모임 삭제                                         |                                        게시글 작성                                        |
 | :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: |
-| ![Image](https://github.com/user-attachments/assets/31a50791-579e-4f99-9bba-7584f5555947) | ![Image](https://github.com/user-attachments/assets/d63184c3-4179-4443-b380-935086fb7163) | ![Image](https://github.com/user-attachments/assets/3dcf61c8-cc13-457e-b1b4-4a806c227e1a) | ![Image](https://github.com/user-attachments/assets/5e319835-4f51-47e3-a663-684ed91ad79d) |
+| ![Image](https://github.com/user-attachments/assets/bed2fb4a-c333-4dac-b2f8-4bada8eab43b) | ![Image](https://github.com/user-attachments/assets/d63184c3-4179-4443-b380-935086fb7163) | ![Image](https://github.com/user-attachments/assets/4525cad5-b3b0-40a0-9b4e-46e5ee842a99) | ![Image](https://github.com/user-attachments/assets/321eb252-20df-41f0-9090-7c4408447ff5) |
 
 |                                        게시글 수정                                        |                                         일정 생성                                         |                                           알림                                            |                                      채팅 및 AI요약                                       |
 | :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: |
-| ![Image](https://github.com/user-attachments/assets/3d60bc75-8200-43f9-9ae0-75df6e3d548a) | ![Image](https://github.com/user-attachments/assets/aab09072-7ab2-4f72-8d0e-a822391da413) | ![Image](https://github.com/user-attachments/assets/9ffefc4e-bf4c-48ec-88db-f262f3ae311b) | ![Image](https://github.com/user-attachments/assets/89a45cd3-a9ba-4c9d-8924-7fbcd282d816) |
+| ![Image](https://github.com/user-attachments/assets/3a299c7a-6723-45ef-9636-776a189370f0) | ![Image](https://github.com/user-attachments/assets/7f0b0289-251d-41a0-a973-d4f9ba081bf4) | ![Image](https://github.com/user-attachments/assets/acb0238b-6042-4f73-a417-db8da55a721d) | ![Image](https://github.com/user-attachments/assets/84f4a9d9-98d1-4875-87d0-64beb493f8ee) |
 
 |                                        마이 페이지                                        |                                        모임방 참여                                        |                                         멤버 관리                                         |                                         댓글 CRUD                                         |
 | :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: |
-| ![Image](https://github.com/user-attachments/assets/07505ebc-aebc-4898-8f75-c9837e430f95) | ![Image](https://github.com/user-attachments/assets/f5bd45d8-289f-489f-995f-0015543f3b19) | ![Image](https://github.com/user-attachments/assets/0d6ddeed-7d5c-4ee4-9eeb-b47f83971e6b) | ![Image](https://github.com/user-attachments/assets/69b868e1-d221-4cea-a708-7073c3e139e7) |
+| ![Image](https://github.com/user-attachments/assets/5344cb36-23a3-4b4f-ae86-63b83f0c7b8e) | ![Image](https://github.com/user-attachments/assets/673ce466-9deb-480e-aff2-153fb40ae15d) | ![Image](https://github.com/user-attachments/assets/9deceef3-6b82-4f5c-b7a8-7b9a20d58777) | ![Image](https://github.com/user-attachments/assets/fd4c2eea-ebad-4bd3-9ab3-220b923c8d11) |
 
-<br>
+<br><br>
 
 # ⚙️ 기술 스택
 
@@ -153,7 +180,7 @@
 - vercel을 통한 배포
 - sentry를 통한 에러 추적 및 모니터링
 
-<br>
+<br><br>
 
 # 💣 트러블 슈팅
 
@@ -228,120 +255,4 @@
 
 </details>
 
-<br>
-
-# 🌳 프로젝트 구조
-
-```bash
-📦src
- ┣ 📂app
- ┃ ┣ 📂api
- ┃ ┃ ┣ 📂auth
- ┃ ┃ ┗ 📂post
- ┃ ┣ 📂chat
- ┃ ┃ ┣ 📂[id]
- ┃ ┃ ┗ 📂_components
- ┃ ┣ 📂fonts
- ┃ ┣ 📂groups
- ┃ ┃ ┣ 📂new
- ┃ ┃ ┃ ┗ 📂_components
- ┃ ┃ ┃   ┗ 📂stepComponents
- ┃ ┃ ┗ 📂[id]
- ┃ ┃   ┣ 📂management
- ┃ ┃   ┃ ┣ 📂members
- ┃ ┃   ┃ ┃ ┗ 📂_components
- ┃ ┃   ┃ ┗ 📂_components
- ┃ ┃   ┣ 📂posts
- ┃ ┃   ┃ ┣ 📂new
- ┃ ┃   ┃ ┃ ┗ 📂_components
- ┃ ┃   ┃ ┗ 📂[postId]
- ┃ ┃   ┃   ┗ 📂edit
- ┃ ┃   ┃     ┗ 📂_components
- ┃ ┃   ┣ 📂schedules
- ┃ ┃   ┃ ┣ 📂new
- ┃ ┃   ┃ ┣ 📂[scheduleid]
- ┃ ┃   ┃ ┗ 📂_components
- ┃ ┃   ┗ 📂_components
- ┃ ┣ 📂join
- ┃ ┃ ┗ 📂[id]
- ┃ ┃   ┗ 📂_components
- ┃ ┣ 📂login
- ┃ ┃ ┗ 📂_components
- ┃ ┣ 📂mypage
- ┃ ┃ ┗ 📂_components
- ┃ ┣ 📂notifications
- ┃ ┃ ┗ 📂_components
- ┃ ┣ 📂signup
- ┃ ┃ ┣ 📂success
- ┃ ┃ ┃ ┗ 📂_components
- ┃ ┃ ┗ 📂_components
- ┃ ┗ 📂_components
- ┣ 📂components
- ┃ ┣ 📂common
- ┃ ┣ 📂icons
- ┃ ┗ 📂providers
- ┣ 📂hooks
- ┃ ┣ 📂chat
- ┃ ┣ 📂comment
- ┃ ┣ 📂common
- ┃ ┣ 📂home
- ┃ ┣ 📂join
- ┃ ┣ 📂management
- ┃ ┣ 📂notifications
- ┃ ┣ 📂photo
- ┃ ┣ 📂post
- ┃ ┣ 📂schedule
- ┃ ┗ 📂user
- ┣ 📂lib
- ┃ ┗ 📂join
- ┣ 📂queries
- ┃ ┣ 📂chat
- ┃ ┣ 📂group
- ┃ ┃ ┗ 📂comments
- ┃ ┣ 📂home
- ┃ ┣ 📂join
- ┃ ┣ 📂management
- ┃ ┣ 📂notifications
- ┃ ┣ 📂photo
- ┃ ┣ 📂post
- ┃ ┣ 📂schedule
- ┃ ┗ 📂users
- ┣ 📂stores
- ┣ 📂types
- ┗ 📂utils
-   ┗ 📂supabase
-```
-
-<br>
-
-## 🛠️ 설치 및 실행
-
-### **로컬에서 실행**
-
-1. **프로젝트 클론**
-
-   ```bash
-   git clone https://github.com/adorable-otter/modak-modak.git
-   cd modak-modak
-   ```
-
-2. **패키지 설치**
-
-   ```bash
-   yarn or yarn install
-   ```
-
-3. **개발 서버 실행**
-
-   ```bash
-   yarn dev
-   ```
-
-   브라우저에서 `http://localhost:3000`에 접속하여 확인.
-
-4. **빌드 및 프로덕션 실행**
-   ```bash
-   yarn s
-   ```
-
----
+<br><br>
