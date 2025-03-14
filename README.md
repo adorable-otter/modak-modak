@@ -42,7 +42,7 @@ https://github.com/user-attachments/assets/3f91078b-3812-4c40-9d68-244093e007be
 | ---------------------------------------------------- | -------------------------------------------------------- | ------------------------------------- | ----------------------------------------------- | ------------------------------------------ |
 | [@adorable-otter](https://github.com/adorable-otter) | [@heftyCornerstone](https://github.com/heftyCornerstone) | [@minhoo](https://github.com/Kminhoo) | [@euncloud](https://github.com/euncloud)        | [@WonYunSun](https://github.com/WonYunSun) |
 | 팀장                                                 | 부팀장                                                   | 팀원                                  | 팀원                                            | 팀원                                       |
-| 인증/인가, 일정 캘린더, <br> react native app        | 홈, 모임 관리, 멤버 목록, <br>모임 가입 신청, 알림       | 댓글, 채팅                            | 모임방(게시글, 사진첩, 검색) <br> 공용 컴포넌트 | 모임 생성, 모임 일정, <br> 공용 컴포넌트   |
+| 인증/인가, 일정 캘린더, <br> react native app        | 홈, 모임 관리, 멤버 목록, <br>모임 가입 신청, 알림,<br> react native app       | 댓글, 채팅 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | 모임방(게시글, 사진첩, 검색) <br> 공용 컴포넌트 | 모임 생성, 모임 일정, <br> 공용 컴포넌트   |
 
 <br><br>
 
@@ -70,13 +70,13 @@ https://github.com/user-attachments/assets/3f91078b-3812-4c40-9d68-244093e007be
 
 - 가입/대기중 모임 목록
 
-#### 알림 [`/notifiactions`]
+#### 알림 [`/notifications`]
 
 - 신규/읽은 알림 확인
 
 #### 마이페이지 [`/mypage`]
 
-- 프로필 표시, 일정 표시
+- 프로필 표시, 일정 캘린더 표시
 
 <br>
 
@@ -114,9 +114,9 @@ https://github.com/user-attachments/assets/3f91078b-3812-4c40-9d68-244093e007be
 
 #### 모임 가입 신청 페이지
 
-- 사용자의 다양한 상태에 따른 분기처리
+- 사용자의 인증 상태와 모임 가입 신청 가능 여부를 고려하여 적합한 유저에게 신청 기능 제공
 
-#### 사용자 프로필 관리
+#### 나의 일정 캘린더
 
 - **Swiper**를 사용한 사용자 모임 일정, 캘린더 확인
 
@@ -170,6 +170,15 @@ https://github.com/user-attachments/assets/3f91078b-3812-4c40-9d68-244093e007be
 
 <br><br>
 
+# 📱 모바일 기능 구현 영상
+
+|                                    아이콘 및 스플래시 이미지                                     |                                         푸시 알림 수신                                         |                                                                                  |                                                                                |
+| :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: |
+| ![Image](https://github.com/user-attachments/assets/524ced39-096b-400a-aa94-5104258fc22f) | ![Image](https://github.com/user-attachments/assets/5fce0ce9-3285-419a-a75d-047c7062826d) | ![transparent_308x672](https://github.com/user-attachments/assets/176319f3-2db4-43b0-b1cc-80697f72736f) | ![transparent_308x672](https://github.com/user-attachments/assets/b2fa2377-1500-459d-a799-8a01868006a1)
+
+<br>
+<br>
+
 # ⚙️ 기술 스택
 
 ### **프레임워크 및 라이브러리 코어**
@@ -177,6 +186,8 @@ https://github.com/user-attachments/assets/3f91078b-3812-4c40-9d68-244093e007be
 - Next.js
 - React
 - TypeScript
+- Expo
+- React Native
 
 ### **상태 관리 및 데이터 페칭**
 
